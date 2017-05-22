@@ -1,4 +1,7 @@
 'use strict';
+$( document ).ready(function(){
+    $(".button-collapse").sideNav();
+});
 
 // Declare app level module which depends on views, and components
 angular.module('myApp', [

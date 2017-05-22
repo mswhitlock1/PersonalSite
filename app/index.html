@@ -15,25 +15,35 @@
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body ng-controller="BodyController">
-    <nav>
+    <!--header class="header">
+        <a href="#" class="header__icon" id="header__icon"></a>
+      <a href="#" class="header__logo">Logo</a>
+      
+      <nav class="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </nav-->
+    <nav class="nav-extended">
         <div class="nav-wrapper">
             <a style="padding-left:20px;" href="#!/home" class="brand-logo">Matt Whitlock</a>
+            <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="#!/research">Research</a></li>
                 <li><a href="#!/cv">CV</a></li>
-                <li><a href="#!/personal">Personal</a></li>                
+                <li><a href="#!/personal">Personal</a></li>   
+                <li><a href="#!/contact">Contact</a></li>
+            </ul>
+            <ul id="mobile-menu" class="side-nav">
+                <li><a href="#!/research">Research</a></li>
+                <li><a href="#!/cv">CV</a></li>
+                <li><a href="#!/personal">Personal</a></li>   
                 <li><a href="#!/contact">Contact</a></li>
             </ul>
         </div>
     </nav>
-    <div style="padding-top:50px;" class="parallax-container">
-        <div parallax><img src="img/Boulder_Mountains_Idaho.jpg"></div>
-        <div style="padding-left:20px;color:white;font-weight:bold;text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;">
-            <h1>University of Colorado</h1>
-            <h3>PhD Student</h3>
-            <h3>Department of Computer Science</h3>
-        </div>
-    </div>
+    <!/header>
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -54,6 +64,8 @@
     <!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
     <script src="app.js"></script>
     <script src="home/home.js"></script>
