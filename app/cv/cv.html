@@ -1,5 +1,5 @@
-<h3 style="padding-left:20px;">Publications</h3>
 <div ng-controller="CVCtrl">
+<h3 style="padding-left:20px;">Publications</h3>
 <div ng-repeat="pub in publications" style="margin-left:20px;margin-right:20px;height:200px;" class="card">
     <div class="card-content">
         <span class="card-title activator grey-text text-darken-4"><i class="material-icons top right">more_horiz</i>{{pub.title}}</span>
@@ -14,43 +14,46 @@
     </div>
 </div>
 
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pellentesque lectus ex, non mollis nibh vestibulum et. Morbi a tellus sollicitudin, ornare ante quis, pulvinar orci. Nunc dignissim, tellus vel commodo venenatis, nisl mi cursus nisi, a sodales magna orci a quam. Nam quis dui sit amet ex consectetur maximus id tincidunt odio. Curabitur quis euismod sem, sed luctus orci. Vivamus mattis metus non ipsum tempus, quis aliquet urna lobortis. Sed dignissim quis ex eu fermentum. Praesent finibus ultrices mi ut elementum. Ut fermentum eleifend magna, tempus imperdiet tortor sollicitudin non.
-</p>
+<h3 style="padding-left:20px;">Teaching</h3>
+<div ng-repeat="teaching in teachingExperiences" style="margin-left:20px;margin-right:20px;" class="card">
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">{{teaching.title}}</span>
+        <br>
+        <ul class="collection">
+            <li ng-repeat="detail in teaching.details" class="collection-item">{{detail}}</li>
+        </ul>
+    </div>
+</div>
 
-<p>
-Aenean semper, velit non feugiat mollis, justo nisl convallis lacus, sed dignissim est lacus non purus. Vivamus ultricies sapien velit, sit amet sollicitudin urna sagittis ut. Phasellus varius quam ex, at lacinia purus scelerisque eget. Nunc eleifend, nibh a egestas placerat, nisl nulla dictum ligula, vel aliquam est erat et metus. Donec orci odio, vestibulum sit amet turpis a, lacinia porta lacus. Maecenas pretium ipsum scelerisque ligula consequat rhoncus. Duis et tincidunt tellus, in egestas risus. Nam nulla velit, hendrerit nec velit eu, convallis mattis urna. Sed molestie bibendum mi, a porttitor enim vehicula et. Curabitur aliquet in diam ac tristique. Donec semper a turpis eget porttitor. Nullam gravida orci sed aliquet pretium. Ut placerat ultricies euismod.
-</p>
+<h3 style="padding-left:20px;">Recent and Relevant Coursework</h3>
+<div ng-repeat="semester in coursework" style="margin-left:20px;margin-right:20px;" class="card">
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">{{semester.title}}</span>
+        <br>
+        <div ng-repeat="course in semester.courses">
+            <span style="font-size:18px;font-weight:bold;" class="title">{{course.title}}</span>
+            <ul class="collection">
+                <li ng-repeat="detail in course.details" class="collection-item">{{detail}}</p>
+            </ul>
+        </div>
+    </div>
+</div>
 
-<p>
-Morbi id risus eget velit vehicula vehicula sed non nisi. Proin at odio venenatis, tincidunt elit vitae, efficitur est. Integer varius euismod tortor ut vestibulum. Praesent non pretium leo. Nunc id mi sit amet erat tristique sagittis non sed diam. Donec porttitor, urna sit amet suscipit consectetur, mi augue ornare arcu, ut semper mi turpis nec ligula. Etiam tristique mauris ac ultrices accumsan.
-</p>
-
-<p>
-Morbi non ultricies tortor. Praesent sit amet rhoncus nisl, ut hendrerit urna. Nulla ut rutrum leo. Suspendisse varius feugiat tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec consequat sollicitudin aliquet. Suspendisse potenti. Cras euismod justo ipsum, at ornare ante feugiat non. Aliquam fermentum magna sit amet nulla pharetra, quis fringilla nisi accumsan. Phasellus aliquam ullamcorper justo eu fermentum. Pellentesque lacinia venenatis tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi maximus neque a diam tempus pellentesque. Cras venenatis vulputate metus id finibus. Mauris ac dictum tellus, id dapibus quam.
-</p>
-
-<p>
-Sed maximus diam at facilisis vestibulum. Cras porttitor volutpat velit, nec semper purus congue et. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas vitae tempor nisl. Curabitur dictum lectus in arcu fermentum tempus. Praesent vitae dolor nulla. Morbi ac gravida nunc. Sed sed neque sit amet sapien mollis dapibus. Quisque vehicula, turpis quis sodales gravida, metus tortor faucibus dolor, at blandit nunc augue et ipsum. Etiam eu volutpat ex, at rhoncus est. Praesent consectetur, diam eget imperdiet feugiat, justo odio placerat neque, at ornare dui augue et nisl. Sed at lacus libero.
-</p>
-
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pellentesque lectus ex, non mollis nibh vestibulum et. Morbi a tellus sollicitudin, ornare ante quis, pulvinar orci. Nunc dignissim, tellus vel commodo venenatis, nisl mi cursus nisi, a sodales magna orci a quam. Nam quis dui sit amet ex consectetur maximus id tincidunt odio. Curabitur quis euismod sem, sed luctus orci. Vivamus mattis metus non ipsum tempus, quis aliquet urna lobortis. Sed dignissim quis ex eu fermentum. Praesent finibus ultrices mi ut elementum. Ut fermentum eleifend magna, tempus imperdiet tortor sollicitudin non.
-</p>
-
-<p>
-Aenean semper, velit non feugiat mollis, justo nisl convallis lacus, sed dignissim est lacus non purus. Vivamus ultricies sapien velit, sit amet sollicitudin urna sagittis ut. Phasellus varius quam ex, at lacinia purus scelerisque eget. Nunc eleifend, nibh a egestas placerat, nisl nulla dictum ligula, vel aliquam est erat et metus. Donec orci odio, vestibulum sit amet turpis a, lacinia porta lacus. Maecenas pretium ipsum scelerisque ligula consequat rhoncus. Duis et tincidunt tellus, in egestas risus. Nam nulla velit, hendrerit nec velit eu, convallis mattis urna. Sed molestie bibendum mi, a porttitor enim vehicula et. Curabitur aliquet in diam ac tristique. Donec semper a turpis eget porttitor. Nullam gravida orci sed aliquet pretium. Ut placerat ultricies euismod.
-</p>
-
-<p>
-Morbi id risus eget velit vehicula vehicula sed non nisi. Proin at odio venenatis, tincidunt elit vitae, efficitur est. Integer varius euismod tortor ut vestibulum. Praesent non pretium leo. Nunc id mi sit amet erat tristique sagittis non sed diam. Donec porttitor, urna sit amet suscipit consectetur, mi augue ornare arcu, ut semper mi turpis nec ligula. Etiam tristique mauris ac ultrices accumsan.
-</p>
-
-<p>
-Morbi non ultricies tortor. Praesent sit amet rhoncus nisl, ut hendrerit urna. Nulla ut rutrum leo. Suspendisse varius feugiat tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec consequat sollicitudin aliquet. Suspendisse potenti. Cras euismod justo ipsum, at ornare ante feugiat non. Aliquam fermentum magna sit amet nulla pharetra, quis fringilla nisi accumsan. Phasellus aliquam ullamcorper justo eu fermentum. Pellentesque lacinia venenatis tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi maximus neque a diam tempus pellentesque. Cras venenatis vulputate metus id finibus. Mauris ac dictum tellus, id dapibus quam.
-</p>
-
-<p>
-Sed maximus diam at facilisis vestibulum. Cras porttitor volutpat velit, nec semper purus congue et. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas vitae tempor nisl. Curabitur dictum lectus in arcu fermentum tempus. Praesent vitae dolor nulla. Morbi ac gravida nunc. Sed sed neque sit amet sapien mollis dapibus. Quisque vehicula, turpis quis sodales gravida, metus tortor faucibus dolor, at blandit nunc augue et ipsum. Etiam eu volutpat ex, at rhoncus est. Praesent consectetur, diam eget imperdiet feugiat, justo odio placerat neque, at ornare dui augue et nisl. Sed at lacus libero.
-</p>
+<h3 style="padding-left:20px;">Work Experience</h3>
+<div ng-repeat="work in workExperience" style="margin-left:20px;margin-right:20px;" class="card">
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">
+            <!img ng-src='{{work.logo}}' width=60px style="padding-right:20px;"/>
+            <i>{{work.company}}</i> &nbsp; <b>{{work.job}}</b>
+            <a class="right">{{work.location}}</a>
+        </span>
+        <br>
+        <div ng-repeat="stint in work.stints">
+            <span style="font-size:18px;font-weight:bold;" class="title">{{stint.dates}}</span>
+            <ul class="collection">
+                <li class="collection-item" ng-repeat="detail in stint.details">{{detail}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
 </div>

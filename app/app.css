@@ -23,3 +23,13 @@
   content: "|";
   padding-right: 0.3em;
 }
+.gallery-thumbnail {
+    margin-right: 20px;
+    float: left;
+    width: 350px;
+}
+.image-overlay-title {
+    padding-left:20px;
+    color:white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}

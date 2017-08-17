@@ -13,8 +13,10 @@
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
     <link rel="stylesheet" href="app.css">
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <!script src="bower_components/angular-tablesort/js/angular-tablesort.js"><!/script>
 </head>
-<body ng-controller="BodyController">
+<body ng-controller="BodyController"  style="background:gainsboro;">
     <!--header class="header">
         <a href="#" class="header__icon" id="header__icon"></a>
       <a href="#" class="header__logo">Logo</a>
@@ -31,14 +33,19 @@
             <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="#!/research">Research</a></li>
+                <li><a href="#!/skills">Skills</a></li>
                 <li><a href="#!/cv">CV</a></li>
                 <li><a href="#!/personal">Personal</a></li>   
+                <li><a href="#!/galleries">Galleries</a></li>
                 <li><a href="#!/contact">Contact</a></li>
+
             </ul>
             <ul id="mobile-menu" class="side-nav">
                 <li><a href="#!/research">Research</a></li>
+                <li><a href="#!/skills">Skills</a></li>
                 <li><a href="#!/cv">CV</a></li>
-                <li><a href="#!/personal">Personal</a></li>   
+                <li><a href="#!/personal">Personal</a></li>  
+                <li><a href="#!/galleries">Galleries</a></li> 
                 <li><a href="#!/contact">Contact</a></li>
             </ul>
         </div>
@@ -56,7 +63,6 @@
     --> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script><!-- Materialize CSS -->
@@ -66,15 +72,19 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-
+    
     <script src="app.js"></script>
     <script src="home/home.js"></script>
     <script src="research/research.js"></script>    
     <script src="cv/cv.js"></script>
     <script src="personal/personal.js"></script>    
-    <script src="contact/contact.js"></script>
+    <script src="contact/contact.js"></script>    
+    <script src="galleries/galleries.js"></script>    
+    <script src="gallery/gallery.js"></script>
+    <script src="skills/skills.js"></script>
     <script src="components/version/version.js"></script>
     <script src="components/version/version-directive.js"></script>
     <script src="components/version/interpolate-filter.js"></script>
+
 </body>
 </html>

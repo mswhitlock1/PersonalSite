@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="skills/skills.css">
+<div ng-controller="SkillsCtrl" style="margin-left:20px">
+    <table class="striped responsive-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Skill</th>
+                <th>Category</th>
+                <th>Proficiency</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="skill in skills">
+                <td width="100px"><img src='{{skill.icon}}' height="50px"></td>
+                <td>{{skill.name}}</td>
+                <td>{{skill.category}}</td>
+                <td><a ng-repeat='a in skill.proficiency'><i class="material-icons">star</i></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
