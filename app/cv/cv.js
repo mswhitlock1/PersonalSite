@@ -44,7 +44,26 @@ angular.module('myApp.cv', ['ngRoute'])
         ]
     }];
     
-    $scope.coursework = [{
+    $scope.coursework = [
+    {
+        title: "Fall 2017",
+        courses: [
+            {
+                title: "Software Project Management",
+                details: [
+                    "Learn the concepts and common pitfalls of managing a software project",
+                    "Dig deeper into a management topic of interest"
+                ]
+            },
+            {
+                title: "Mobile and Wearable Wireless Sensor Systems",
+                details: [
+                    "Semester-long project in building a novel sensor system in collaboration with Tam Vu's Mobile and Networked Systems Lab."
+                ]
+            }
+        ]
+    },
+    {
         title: "Spring 2017",
         courses: [{
             title: "Ubiquitous Computing & Experience Design",
@@ -52,7 +71,7 @@ angular.module('myApp.cv', ['ngRoute'])
                 "Ubiquitous Computing fundamentals and current state of the field; sketching and prototyping techniques",
                 "Long term team project collaborating with CU Museum of Natural History to prototype and deploy a museum installation",
                 "Personally led discussion on Location services and their relevance in the field of Ubiquitous Computing",
-                "Personally led discussion on the Microsoft HoloLens development and the relevance of the Augmented Reality to Ubiquitous Computing"
+                "Personally led discussion on Microsoft HoloLens development and the relevance of Augmented Reality to Ubiquitous Computing"
                 ]
             },
             {
@@ -63,6 +82,17 @@ angular.module('myApp.cv', ['ngRoute'])
                 ]
             }
         ]
+    },
+    {
+        title: "Fall 2016",
+        courses: [{
+            title: "User Centered Design",
+            details: [
+                "Concepts of iterative user-cented design; understanding and practicing the benefits of different levels of prototype fidelity",
+                "Led project team in building prototypes of an augmented reality shopping application at increasing levels of fidelity and iterating on feedback"
+            ]
+            
+        }]
     }];
     
     $scope.workExperience = [
