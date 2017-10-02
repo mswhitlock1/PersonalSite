@@ -3,25 +3,26 @@
 angular.module('myApp.cv', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/cv', {
+  $routeProvider.when('/cv/:version', {
     templateUrl: 'cv/cv.html',
     controller: 'CVCtrl'
   });
 }])
 
-.controller('CVCtrl', ['$scope', function($scope) {
+.controller('CVCtrl', ['$scope', '$routeParams', function($scope, $routeParams) {
+    $scope.version = $routeParams.version;
     $scope.publications = [{
         title: "Becoming Butterflies: Interactive Embodiment of the Butterfly Lifecycle",
         authorlist: "Annie Kelly, Matt Whitlock, Brielle Nickoloff, Angel Lam, Danielle Szafir, Stephen Voida",
         conference: "Ubicomp: ACM International Joint Conference on Pervasive and Ubiquitous Computing, 2017",
-        citation: "",
+        citation: "https://dl.acm.org/citation.cfm?id=3123136",
         abstract: "Museum directors are often faced with the challenge of engaging users in the museum experience while preserving the intentions of exhibit content. Designing exhibits for children can heighten the tension between these sometimes competing goals. Working with the University of Colorado Museum of Natural History, we designed and implemented Metamorphosis, a system for an engaging, educational butterfly exhibit. The exhibit employs augmented reality and full-body interaction to guide users through critical phases of a butterfly‘s metamorphosis process. In Metamorphosis, we incorporated participatory design methods in order to leverage engaging ubiquitous technologies while supporting an educational narrative aligned with the museum‘s goals."
     },
     {
         title: "Enhancing Wi-Fi Signal Strength of a Dynamic Heterogeneous System Using a Mobile Robot Provider",
         authorlist: "Esther Rolf, Matt Whitlock, Byung-Cheol Min, Eric T Matson",
         conference: "RITA (Robot Intelligence Technology and Applications), 2013",
-        citation: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=pjN9Sz0AAAAJ&citation_for_view=pjN9Sz0AAAAJ:u5HHmVD_uO8C",
+        citation: "https://link.springer.com/chapter/10.1007/978-3-319-05582-4_81",
         abstract: "Heterogeneous networks of humans, robots, and agents are becoming increasingly common. Clients of wireless networks have continuously changing requirements for providers. In this project, a system to provide a sufficient signal for clients of a network as conditions change is proposed and validated. The system is comprised of hardware features such as a mobile access point and three heterogeneous client devices, and a movement algorithm. The mobile provider’s autonomy is verified by the independence of initial position or orientation from success of the system. The system is designed for ease of reconfiguration; modularity in system design allows for advancements to be implemented simply and effectively."
     }];
     
