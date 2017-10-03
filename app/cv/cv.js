@@ -3,14 +3,14 @@
 angular.module('myApp.cv', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/cv/:version', {
+  $routeProvider.when('/cv', {
     templateUrl: 'cv/cv.html',
     controller: 'CVCtrl'
   });
 }])
 
 .controller('CVCtrl', ['$scope', '$routeParams', function($scope, $routeParams) {
-    $scope.version = $routeParams.version;
+    $('ul.tabs').tabs();
     $scope.publications = [{
         title: "Becoming Butterflies: Interactive Embodiment of the Butterfly Lifecycle",
         authorlist: "Annie Kelly, Matt Whitlock, Brielle Nickoloff, Angel Lam, Danielle Szafir, Stephen Voida",

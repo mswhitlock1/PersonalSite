@@ -1,12 +1,61 @@
-<div class="row">
-    <div class="col s12">
-        <ul class="tabs" style="background-color:gainsboro;">
-            <li class="tab col s6"><a href="#!/cv/html">HTML</a></li>
-            <li class="tab col s6"><a class="active" href="#!/cv/pdf">PDF</a></li>
-        </ul>
+
+<div class="row" ng-controller="CVCtrl">
+    <div class="col s12" style="margin-top:20px;margin-bottom:20px;">
+      <ul class="tabs tabs-fixed-width" style="background-color:gainsboro;">
+        <li class="tab col s5" style="background-color:gainsboro;"><a href="#html"  class="active">HTML</a></li>
+        <li class="tab col s5" style="background-color:gainsboro;"><a href="#pdf">PDF</a></li>
+      </ul>
     </div>
+    <div id="html" class="col s12">
+        <h4 style="padding-left:20px;">Publications</h3>
+        <div ng-repeat="pub in publications" style="margin-left:20px;margin-right:20px;margin-bottom:20px;">
+            <span class="card-title grey-text text-darken-4" style="font-size:20px;">{{pub.title}}</span>
+            <a href={{pub.citation}}  style="float:right;" target="_blank">Citation</a><br/>
+            &nbsp; <i class="grey-text text-darken-4"> {{pub.conference}}</i><br/>
+            &nbsp; <a class="grey-text text-darken-4"> {{pub.authorlist}}</a><br/><hr>
+        </div>
+
+        <h4 style="padding-left:20px;">Teaching</h3>
+        <div ng-repeat="teaching in teachingExperiences" style="margin-left:20px;margin-right:20px;margin-bottom:20px;">
+            <span class="card-title grey-text text-darken-4" style="font-size:20px;">{{teaching.title}}</span>
+                <br/>
+                <ul class="collection" style="border-color:#CACACA;">
+                    <li ng-repeat="detail in teaching.details" class="collection-item" style="background-color:gainsboro;border-color:#CACACA;">{{detail}}</li>
+                </ul>
+        </div>
+
+        <h4 style="padding-left:20px;">Recent and Relevant Coursework</h4>
+        <div ng-repeat="semester in coursework" style="margin-left:20px;margin-right:20px;margin-bottom:20px;">
+            <span class="card-title activator grey-text text-darken-4" style="font-size:20px;margin-bottom:20px;">{{semester.title}}</span><br>
+            <div ng-repeat="course in semester.courses">
+                <span style="font-size:16px;font-weight:bold;" class="title">{{course.title}}</span> <br/>
+                <ul class="collection"  style="border-color:#CACACA;">
+                    <li ng-repeat="detail in course.details" class="collection-item" style="background-color:gainsboro;border-color:#CACACA;">{{detail}}</li>
+                </ul>
+            </div>
+        </div>
+
+        <h4 style="padding-left:20px;">Work Experience</h4>
+        <div ng-repeat="work in workExperience" style="margin-left:20px;margin-right:20px;margin-bottom:20px;">
+            <span class="card-title activator grey-text text-darken-4">
+                <!img ng-src='{{work.logo}}' width=60px style="padding-right:20px;"/>
+                <i style="font-size:20px;">{{work.company}}</i> &nbsp; <b style="font-size:20px;">{{work.job}}</b>
+                <a class="right">{{work.location}}</a>
+            </span>
+            <br>
+            <div ng-repeat="stint in work.stints">
+                <span style="font-size:18px;font-weight:bold;" class="title">{{stint.dates}}</span>
+                <ul class="collection" style="border-color:#CACACA;">
+                    <li class="collection-item" style="background-color:gainsboro;border-color:#CACACA;" ng-repeat="detail in stint.details">{{detail}}</li>
+                </ul>
+            </div>
+            <hr>
+        </div>
+        </div>
+    <div id="pdf" class="col s12">PDF VERSION HERE</div>
 </div>
-<div ng-controller="CVCtrl">  
+              
+<!--div ng-controller="CVCtrl">  
     <div ng-if="version=='html'">
         <h4 style="padding-left:20px;">Publications</h3>
         <div ng-repeat="pub in publications" style="margin-left:20px;margin-right:20px;margin-bottom:20px;">
@@ -56,4 +105,4 @@
         <div ng-if="version=='pdf'">
             Pdf version here
         </div>
-    </div>
+    </div-->

@@ -33,3 +33,17 @@
     color:white;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
+ul.tabs > li.tab > a {
+    font-size:36px;
+    color: goldenrod;
+}
+ul.tabs > li.tab > a.active {
+    color: darkgoldenrod;
+}
+.tabs .indicator {
+    margin-top:10px;
+	background-color:darkgoldenrod;
+}
+.tabs {
+    overflow-x: hidden;
+}
