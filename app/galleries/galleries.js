@@ -10,6 +10,7 @@ angular.module('myApp.galleries', ['ngRoute'])
 }])
 
 .controller('GalleriesCtrl', ['$scope', function($scope) {
+    window.scrollTo(0, 0);
     $scope.galleries = [
         {
             name: 'Senior Projects',

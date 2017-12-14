@@ -20,8 +20,8 @@ angular.module('myApp.gallery', ['ngRoute'])
 })
 
 .controller('GalleryCtrl', ['$scope', '$routeParams', function($scope, $routeParams) {
+    window.scrollTo(0, 0);
     $scope.$on('$viewContentLoaded', function() {
-        console.log("HEY");
         $('.materialboxed').materialbox();
     });
     $scope.galleryName = $routeParams.param1;

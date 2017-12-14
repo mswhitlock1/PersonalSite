@@ -10,7 +10,20 @@ angular.module('myApp.cv', ['ngRoute'])
 }])
 
 .controller('CVCtrl', ['$scope', '$routeParams', function($scope, $routeParams) {
-    $('ul.tabs').tabs();
+    window.scrollTo(0, 0);
+    function setPdfHeight() {
+        if(window.innerWidth > 990) {
+            $('#pdfDiv').height(window.innerHeight - 330);    
+            $('#pdfObject').height(window.innerHeight - 330);
+        } else {
+
+            $('#pdfDiv').height(window.innerHeight - 475);    
+            $('#pdfObject').height(window.innerHeight - 475);
+        }
+    }
+    
+    $( window ).ready(setPdfHeight);
+    $( window ).resize(setPdfHeight);
     $scope.publications = [{
         title: "Becoming Butterflies: Interactive Embodiment of the Butterfly Lifecycle",
         authorlist: "Annie Kelly, Matt Whitlock, Brielle Nickoloff, Angel Lam, Danielle Szafir, Stephen Voida",

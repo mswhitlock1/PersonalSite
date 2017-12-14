@@ -1,9 +1,18 @@
-<div ng-controller="ContactCtrl" style="margin-left:20px">
+<div ng-controller="ContactCtrl" style="margin-left:20px; margin-right:20px;">
+    <div style="padding-top:50px; height:600px;" class="parallax-container">
+        <div parallax><img src="img/Matt_Kansas.jpg"></div>
+        <div class="image-overlay-title" style="font-weight:bold;">
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;Contact Me</h1>
+            <!--h3>PhD Student</h3>
+            <h3>Department of Computer Science</h3-->
+        </div>
+    </div>
     <table class="bordered">
         <tbody>
             <tr ng-repeat="contact in contacts">
                 <td width="100px;"><i class="medium material-icons">{{contact.icon}}</i></td>
-                <td><a style="font-size:18px;" href="{{contact.link}}" target="_blank">{{contact.name}}</a></td>
+                <td ng-if = "contact.link.length > 0"><a style="font-size:18px;" href="{{contact.link}}" target="_blank">{{contact.name}}</a></td>                
+                <td ng-if = "contact.link.length == 0" ><a style="font-size:18px;">{{contact.name}}</a></td>
             </tr>
         </tbody>
     </table>

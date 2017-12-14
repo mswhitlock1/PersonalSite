@@ -10,11 +10,12 @@ angular.module('myApp.contact', ['ngRoute'])
 }])
 
 .controller('ContactCtrl', ['$scope', function($scope) {
+    window.scrollTo(0, 0);
     $scope.contacts = [
         {
             icon: 'email',
             name: 'matthew.whitlock (at) colorado.edu',
-            link: 'mailto:matthew.whitlock@colorado.edu'
+            link: ''
         },
         {
             icon: 'location_on',

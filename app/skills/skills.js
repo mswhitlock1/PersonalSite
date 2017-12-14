@@ -10,6 +10,7 @@ angular.module('myApp.skills', ['ngRoute'])
 }])
 
 .controller('SkillsCtrl', ['$scope', function($scope) {
+    window.scrollTo(0, 0);
     $scope.skills = [
         {
             icon: 'img/skill_logos/unity.jpg',
@@ -45,7 +46,7 @@ angular.module('myApp.skills', ['ngRoute'])
             icon: 'img/skill_logos/WebGL_Logo.svg',
             name: 'WebGL',
             category: 'Framework',
-            proficiency: ['1', '2']
+            proficiency: ['1', '2', '3']
         },
         {
             icon: 'img/skill_logos/Kinect.jpg',

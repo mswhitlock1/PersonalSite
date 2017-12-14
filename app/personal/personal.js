@@ -10,5 +10,5 @@ angular.module('myApp.personal', ['ngRoute'])
 }])
 
 .controller('PersonalCtrl', [function() {
-
+    window.scrollTo(0, 0);
 }]);

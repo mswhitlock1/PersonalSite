@@ -1,6 +1,6 @@
 
 <div class="row" ng-controller="CVCtrl">
-    <div class="col s12" style="margin-top:20px;margin-bottom:20px;">
+    <!--div class="col s12" style="margin-top:20px;margin-bottom:20px;">
       <ul class="tabs tabs-fixed-width" style="background-color:gainsboro;">
         <li class="tab col s5" style="background-color:gainsboro;"><a href="#html"  class="active">HTML</a></li>
         <li class="tab col s5" style="background-color:gainsboro;"><a href="#pdf">PDF</a></li>
@@ -51,8 +51,12 @@
             </div>
             <hr>
         </div>
-        </div>
-    <div id="pdf" class="col s12">PDF VERSION HERE</div>
+        </div-->
+    <div id="pdfDiv" class="col s12">
+        <object id="pdfObject" data="cv/CV_Public.pdf" type="application/pdf" width="100%" style="height:100%;">
+            <p>Alternative text - include a link <a href="myfile.pdf">to the PDF!</a></p>
+        </object>
+    </div>
 </div>
               
 <!--div ng-controller="CVCtrl">  
