@@ -13,10 +13,10 @@ angular.module('myApp.research', ['ngRoute'])
     window.scrollTo(0, 0);
     $scope.currentProjects = [
         {
-            img: "",
+            img: "img/home/HL-Wiimote.gif",
             img_link: "",
             link_name: "",
-            description: "We just completed a study on interactions in augmented reality. We are comparing current state of the art in interactions with digital content to other potential means of interaction.  We itend to inform designers of future hardware and applications"
+            description: "We just completed a study on interactions in augmented reality. We are comparing current state of the art in interactions with digital content to other potential means of interaction.  We intend to inform designers of future hardware and applications"
         },
         {
             img: "",
