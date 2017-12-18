@@ -19,13 +19,13 @@ angular.module('myApp.research', ['ngRoute'])
             description: "We conducted a study on interactions in augmented reality. We are comparing modalities current state of the art in interactions with digital content to other potential means of interaction.  We intend to inform designers of future hardware and applications."
         },
         {
-            img: "img/research/Museum_AR.png",
+            img: "img/research/Museum_AR.PNG",
             img_link: "",
             link_name: "",
             description: "Leading a team of CU Undergraduates, I am working on a platform for situatationally aware prototyping of environments and experiences in augmented reality. We are interested in the efficacy of such tools and how prototyping in situ can increase inclusion in AR application design to domain experts, rather than just developers."
         },
         {
-            img: "img/research/Fieldview_tease.png",
+            img: "img/research/Fieldview_tease.PNG",
             img_link: "https://www.colorado.edu/cmci/2016/05/18/szafir-receives-grant-data-analysis-mobile-devices",
             link_name: "See Press Release",
             description: "We are exploring the use of virtual and augmented reality in a typical data entry and visualization workflow. With this work, we seek to enable researchers to perform analyses in the field where they collect data."
@@ -53,7 +53,7 @@ angular.module('myApp.research', ['ngRoute'])
             description: "I led a team working on a project that doubled as an exercise in User-Centered Design.  Our group explored the potential for use of augmented reality to blend the virtual and physical shopping experiences.  We went through the stages of interviews and prototyping to iteratively work toward a final prototype, built in virtual reality."
         },
         {
-            img: "img/research/ZayoDashboard.png",
+            img: "img/research/ZayoDashboard.PNG",
             img_link: "",
             link_name: "",
             description: "As a part of a class project for Information Visaulization, we partnered with Zayo to visualize hypothetical mapdata which could inform them on where they may expand their customer base.  Our group presented to Zayo and won second place for our visualization tools and findings."
