@@ -19,13 +19,13 @@ angular.module('myApp.research', ['ngRoute'])
             description: "We conducted a study on interactions in augmented reality. We are comparing modalities current state of the art in interactions with digital content to other potential means of interaction.  We intend to inform designers of future hardware and applications."
         },
         {
-            img: "img/Museum_AR.png",
+            img: "img/research/Museum_AR.png",
             img_link: "",
             link_name: "",
             description: "Leading a team of CU Undergraduates, I am working on a platform for situatationally aware prototyping of environments and experiences in augmented reality. We are interested in the efficacy of such tools and how prototyping in situ can increase inclusion in AR application design to domain experts, rather than just developers."
         },
         {
-            img: "img/Fieldview_tease.png",
+            img: "img/research/Fieldview_tease.png",
             img_link: "https://www.colorado.edu/cmci/2016/05/18/szafir-receives-grant-data-analysis-mobile-devices",
             link_name: "See Press Release",
             description: "We are exploring the use of virtual and augmented reality in a typical data entry and visualization workflow. With this work, we seek to enable researchers to perform analyses in the field where they collect data."
