@@ -1,10 +1,13 @@
   <div style="margin-left:20px;margin-right:20px;" ng-controller=ResearchCtrl>
     <h3 class="header">Current Projects</h2>
     <div ng-repeat = "project in currentProjects" class="card horizontal">
-      <div class="card-image">
+      <div  ng-if="includeDesktopTemplate" class="card-image">
         <img ng-src="{{project.img}}" style="width:300px;">
       </div>
       <div class="card-stacked">
+        <div ng-if="includeMobileTemplate" class="card-image">
+          <img ng-src="{{project.img}}">
+        </div>
         <div class="card-content">
           <p>{{project.description}}</p>
         </div>
@@ -16,10 +19,13 @@
       
     <h3 class="header">Past Projects</h2>
     <div ng-repeat = "project in pastProjects" class="card horizontal">
-      <div class="card-image">
+      <div ng-if="includeDesktopTemplate" class="card-image">
         <img ng-src="{{project.img}}" style="width:300px;">
       </div>
       <div class="card-stacked">
+        <div ng-if="includeMobileTemplate" class="card-image">
+          <img ng-src="{{project.img}}">
+        </div>
         <div class="card-content">
           <p>{{project.description}}</p>
         </div>

@@ -9,11 +9,16 @@
 <br>
 <div style="margin-left:20px;margin-right:20px; font-size:18px;">
     <div class="card horizontal">
-      <div style="margin:20px 20px 20px 20px;" class="card-image">
+      <div ng-if="includeDesktopTemplate" style="margin:20px 20px 20px 20px;" class="card-image">
         <img src="img/home/tieheadshot.jpg">
       </div>
       <div class="card-stacked">
-        <div class="card-content" style=" font-size:24px;">
+        <div ng-if="includeDesktopTemplate" class="card-content" style="font-size:24px;">
+          <p>I am a PhD Student at the University of Colorado-Boulder in the Department of Computer Science.  My passion is in virtual and augmented reality work, specifically seeking to enable and create useful applications with augmented reality.  </p>
+          <p style="padding-top:12px;"> I graduated from the University of Alabama in 2016 with a BS in Computer Science and a Minor in Mathematics. I joined the University of Colorado's VisuaLab, advised by Dr. Danielle Szafir in Fall 2016.</p>
+            <p></p>
+        </div>
+        <div ng-if="includeMobileTemplate" class="card-content" style="margin-right:20px;">
           <p>I am a PhD Student at the University of Colorado-Boulder in the Department of Computer Science.  My passion is in virtual and augmented reality work, specifically seeking to enable and create useful applications with augmented reality.  </p>
           <p style="padding-top:12px;"> I graduated from the University of Alabama in 2016 with a BS in Computer Science and a Minor in Mathematics. I joined the University of Colorado's VisuaLab, advised by Dr. Danielle Szafir in Fall 2016.</p>
             <p></p>
@@ -30,8 +35,14 @@
     </div>
     <div class="card horizontal">
         <div class="card-stacked">
+            <div class="card-image" ng-if="includeMobileTemplate">
+                <img src="img/home/HL-Wiimote.gif">
+            </div>
             <div class="card-content">
-                <div class="card-content" style=" font-size:24px;">
+                <div ng-if= "includeDesktopTemplate" class="card-content" style=" font-size:24px;">
+                    I'm working on some exciting projects and would love to talk about my work and future directions. Feel free to reach out to me to learn more about what I'm doing.
+                </div>
+                <div ng-if= "includeMobileTemplate" class="card-content">
                     I'm working on some exciting projects and would love to talk about my work and future directions. Feel free to reach out to me to learn more about what I'm doing.
                 </div>
             </div>
@@ -40,8 +51,111 @@
                 <a href="#!/research" target="_top">See My Research</a>
             </div>
         </div>
-        <div style="margin:20px 20px 20px 20px;float:right;" class="card-image">
+        <div ng-if="includeDesktopTemplate" style="margin:20px 20px 20px 20px;float:right;" class="card-image">
             <img src="img/home/HL-Wiimote.gif">
         </div>
     </div>
+    <div class="card horizontal">
+    
+    </div>
+    <div id="timeline" class="box">
+        <h1>2018</h1>
+            <ul id="2018-list">
+                <li>
+                    <span></span>
+                    <div class="title">Autodesk Research</div>
+                    <div class="info">Began internship with Autodesk's UI Research group in Toronto, ON; advised by Justin Matejka </div>
+                    <div class="name" ng-if= "!includeMobileTemplate" ><i class="medium material-icons">work</i></div>
+                    <div class="time">
+                        <span>MAY</span>
+                    </div>
+                </li>
+                <li>
+                    <span></span>
+                    <div class="title">IEEE VR 2018</div>
+                    <div class="info">Presented "Interacting with Distant Objects in Augmetned Reality" at IEEE VR in Reutlingen, Germany</div>
+                    <div class="name" ng-if= "!includeMobileTemplate" ><i class="medium material-icons">airplanemode_active</i></div>
+                    <div class="time">
+                        <span>MAR</span>
+                    </div>
+                </li>
+                <li>
+                    <span></span>
+                    <div class="title">ACM Mobisys 2018</div>
+                    <div class="info">"TYTH-Typing On Your Teeth: Tongue-Teeth Localization for Human-Computer Interface" accepted to be presented at ACM MobiSys 2018 <i>(6<sup>th</sup> Author)</i></div>
+                    <div class="name" ng-if= "!includeMobileTemplate" ><i class="medium material-icons">description</i></div>
+                </li>
+                <li>
+                    <span></span>
+                    <div class="title">IEEE VR 2018</div>
+                    <div class="info">"Interacting with Distant Objects in Augmented Reality" accepted to be presented at IEEE VR 2018 <i>(1<sup>st</sup> Author; Acceptance Rate 20.6%)</i></div>
+                    <div class="name" ng-if= "!includeMobileTemplate" ><i class="medium material-icons">description</i></div>
+                    <div class="time">
+                        <span>JAN</span>
+                    </div>
+                </li>
+            </ul>
+                
+            <h1>2017</h1>
+            <ul id="2017-list">
+                <li>
+                    <span></span>
+                    <div class="title">ACM Ubicomp 2017</div>
+                    <div class="info">"Becoming butterflies: interactive embodiment of the butterfly lifecycle" (poster) accepted to appear at ACM Ubicomp 2017 <i>(2<sup>nd</sup> Author)</i></div>
+                    <div class="name" ng-if= "!includeMobileTemplate" ><i class="medium material-icons">description</i></div>
+                    <div class="time">
+                        <span>JUN</span>
+                    </div>
+                </li>
+                <li>
+                    <span></span>
+                    <div class="title">Got Married!</div>
+                    <div class="info">Married Beth Whitlock in Greenville, SC <i>(2<sup>nd</sup> Author, 100% Acceptance Rate)</i></div>
+                    <div class="time">
+                        <span>MAR</span>
+                    </div>
+                </li>                
+            </ul>
+        
+            <h1>2016</h1>
+            <ul id="2016-list">
+                <li>
+                    <span></span>
+                    <div class="title">University of Colorado</div>
+                    <div class="info">Began PhD program in Computer Science at University of Colorado</div>
+                    <div class="name" ng-if= "!includeMobileTemplate" ><i class="medium material-icons">school</i></div>
+                    <div class="time">
+                        <span>AUG</span>
+                    </div>
+                </li>
+                <li>
+                    <span></span>
+                    <div class="title">The Home Depot</div>
+                    <div class="info">Began working at The Home Depot in Atlanta, GA</div>
+                    <div class="name" ng-if= "!includeMobileTemplate"><i class="medium material-icons">work</i></div>
+                    <div class="time">   
+                    <span>MAY</span>
+                    </div>
+                </li>
+                <li>
+                    <span></span>
+                    <div class="title">University of Alabama</div>
+                    <div class="info">Graduated from University of Alabama - BS in Computer Science </div>   
+                    <div class="name" ng-if= "!includeMobileTemplate" ><i class="medium material-icons">school</i></div>  
+                </li>
+            </ul>
+        
+            <h1>2013</h1>
+            <ul id="2013-list">
+                <li>
+                    <span></span>
+                    <div class="title">RITA 2013</div>
+                    <div class="info">"Enhancing Wi-Fi Signal Strength of a Dynamic Heterogeneous System Using a Mobile Robot Provider" accepted to be presented at RiTA 2013 <i>(2<sup>nd</sup> Author)</i></div>
+                    <div class="name"><i class="medium material-icons" ng-if= "!includeMobileTemplate" >description</i></div>
+                    <div class="time">
+                        <span>DEC</span>
+                    </div>
+                </li>
+            </ul>
+        <link rel="stylesheet" href="home/timeline.css">
 </div>

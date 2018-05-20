@@ -9,6 +9,16 @@ angular.module('myApp.home', ['ngRoute'])
   });
 }])
 
-.controller('HomeCtrl', [function() {  
+.controller('HomeCtrl', ['$scope', function($scope) {  
     window.scrollTo(0, 0);
+    
+    $scope.includeMobileTemplate = false; 
+    var screenWidth = window.innerWidth;
+
+    if (screenWidth < 650){
+        $scope.includeMobileTemplate = true;
+        document.getElementById('timeline').style.paddingLeft = "0px";
+    }else{
+        $scope.includeMobileTemplate = false;
+    }
 }]);

@@ -11,12 +11,22 @@ angular.module('myApp.research', ['ngRoute'])
 
 .controller('ResearchCtrl', ['$scope', function($scope) {
     window.scrollTo(0, 0);
+    $scope.includeDesktopTemplate = false;
+    $scope.includeMobileTemplate = false; 
+    var screenWidth = window.innerWidth;
+
+    if (screenWidth < 650){
+        $scope.includeMobileTemplate = true;
+    }else{
+        $scope.includeDesktopTemplate = true;
+    }
+    
     $scope.currentProjects = [
         {
-            img: "img/home/HL-Wiimote.gif",
-            img_link: "",
-            link_name: "",
-            description: "We conducted a study on interactions in augmented reality. We are comparing modalities current state of the art in interactions with digital content to other potential means of interaction.  We intend to inform designers of future hardware and applications."
+            img: "img/research/vr-18.PNG",
+            img_link: "http://cmci.colorado.edu/visualab/ARDistanceInteractions",
+            link_name: "Project Page",
+            description: "Published in IEEE VR 2018, we conducted a study on interactions in augmented reality. We are comparing modalities current state of the art in interactions with digital content to other potential means of interaction.  We intend to inform designers of future hardware and applications."
         },
         {
             img: "img/research/Museum_AR.PNG",
