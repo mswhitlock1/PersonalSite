@@ -12,6 +12,7 @@ angular.module('myApp.home', ['ngRoute'])
 .controller('HomeCtrl', ['$scope', function($scope) {  
     window.scrollTo(0, 0);
     
+    $scope.includeDesktopTemplate = false;
     $scope.includeMobileTemplate = false; 
     var screenWidth = window.innerWidth;
 
@@ -19,6 +20,6 @@ angular.module('myApp.home', ['ngRoute'])
         $scope.includeMobileTemplate = true;
         document.getElementById('timeline').style.paddingLeft = "0px";
     }else{
-        $scope.includeMobileTemplate = false;
+        $scope.includeDesktopTemplate = true;
     }
 }]);
