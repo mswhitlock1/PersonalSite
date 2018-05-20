@@ -12,13 +12,18 @@ angular.module('myApp.cv', ['ngRoute'])
 .controller('CVCtrl', ['$scope', '$routeParams', function($scope, $routeParams) {
     window.scrollTo(0, 0);
     function setPdfHeight() {
+        var dept_CS_extraHeight = document.getElementById("dept_CS").offsetHeight - 17;        
+        var univ_colo_extraHeight = document.getElementById("Univ_Colo").offsetHeight - 17;
         if(window.innerWidth > 990) {
-            $('#pdfDiv').height(window.innerHeight - 330);    
-            $('#pdfObject').height(window.innerHeight - 330);
+            $('#pdfDiv').height(window.innerHeight - 337 - dept_CS_extraHeight - univ_colo_extraHeight);    
+            $('#pdfObject').height(window.innerHeight - 337 - dept_CS_extraHeight - univ_colo_extraHeight);            
         } else {
-
-            $('#pdfDiv').height(window.innerHeight - 475);    
-            $('#pdfObject').height(window.innerHeight - 475);
+            $('#pdfDiv').height(window.innerHeight - 482 - dept_CS_extraHeight - univ_colo_extraHeight);    
+            $('#pdfObject').height(window.innerHeight - 482 - dept_CS_extraHeight - univ_colo_extraHeight);
+        }
+        if (window.innerHeight < 1320) { // Unless the monitor is very big, hide the footer and give two scrollbars
+            $('#pdfDiv').height(document.getElementById("pdfDiv").offsetHeight + 252);            
+            $('#pdfObject').height(document.getElementById("pdfObject").offsetHeight + 252);
         }
     }
     
