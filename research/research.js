@@ -23,38 +23,51 @@ angular.module('myApp.research', ['ngRoute'])
     
     $scope.currentProjects = [
         {
-            img: "img/research/vr-18.PNG",
-            img_link: "http://cmci.colorado.edu/visualab/ARDistanceInteractions",
-            link_name: "Project Page",
-            description: "Published in IEEE VR 2018, we conducted a study on interactions in augmented reality. We are comparing modalities current state of the art in interactions with digital content to other potential means of interaction.  We intend to inform designers of future hardware and applications."
-        },
-        {
             img: "img/research/Museum_AR.PNG",
             img_link: "",
             link_name: "",
-            description: "Leading a team of CU Undergraduates, I am working on a platform for situatationally aware prototyping of environments and experiences in augmented reality. We are interested in the efficacy of such tools and how prototyping in situ can increase inclusion in AR application design to domain experts, rather than just developers."
+            description: "I am working on a platform for situatationally aware prototyping of environments and experiences in augmented reality. We are interested in the efficacy of such tools and how prototyping in situ can increase inclusion in AR application design to domain experts, rather than just developers."
         },
+        
         {
             img: "img/research/FieldView_tease.PNG",
             img_link: "https://www.colorado.edu/cmci/2016/05/18/szafir-receives-grant-data-analysis-mobile-devices",
             link_name: "See Press Release",
             description: "We are exploring the use of virtual and augmented reality in a typical data entry and visualization workflow. With this work, we seek to enable researchers to perform analyses in the field where they collect data."
         
-        },
-        {
-            img: "",
-            img_link: "http://mnslab.org/",
-            link_name: "University of Colorado MNS Lab",
-            description: "Collaborating with Tam Vu's Mobile Network Systems Lab, I have worked on a novel headset that takes externally sensed data and infers tongue gestures for computer interaction."
         }
     ];
     
     $scope.pastProjects = [
         {
+            img: "img/research/vr-18.PNG",
+            img_link: "http://cmci.colorado.edu/visualab/ARDistanceInteractions",
+            link_name: "Project Page",
+            description: "Published in IEEE VR 2018, we conducted a study on interactions in augmented reality. We are comparing modalities current state of the art in interactions with digital content to other potential means of interaction.  We intend to inform designers of future hardware and applications."
+        },
+        {
             img: "img/metamorphosis/butterfly.png",
             img_link: "https://dl.acm.org/citation.cfm?id=3123136",
             link_name: "Publication",
             description: 'In collaboration with the University of Colorado Museum of Natural History, our team is looking to deploy an interactive system to engage students in the "Becoming Butterflies Exhibit."  With use fo the Microsoft Kinect, users with targetted age 7-10 can embody key aspects of the metamorphosis lifecycle.'
+        },
+        {
+            img: "img/research/Gestures.jpg",
+            img_link: "",
+            link_name: "",
+            description: "Our group explored dynamic freehand gesture recognition based on different Machine Learning classification methods and feature representations."
+        },
+        {
+            img: "img/research/Haptics.jpg",
+            img_link: "",
+            link_name: "",
+            description: "Our group explored use of a glove with haptic feedback, finger-based menu control and tilt-based interaction to provide constrained, 1 degree of freedom manipulation of multiple GUI elements in immersive environments."
+        },
+        {
+            img: "img/research/TYTH.PNG",
+            img_link: "https://dl.acm.org/citation.cfm?id=3210322",
+            link_name: "Publication Link",
+            description: "Published at MobiSys 2018, and in collaboration with Tam Vu's Mobile Network Systems Lab, I have worked on TYTH, a novel headset that takes externally sensed data and infers tongue gestures for computer interaction."
         },
         {
             img: "img/StoAR/FullStore.png",
